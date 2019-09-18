@@ -1,15 +1,18 @@
-import mu.KotlinLogging
-import org.brianbrown.search.FileSearch
-import org.junit.jupiter.api.Test
+package org.brianbrown.search
 
 class FileSearchTest {
 
-    val logger = KotlinLogging.logger(FileSearch::class.java.name)
-
-    @Test
-    fun testSearch() {
-        val fileSearch = FileSearch()
-        fileSearch.search("/etc")
+//    @Test
+//    fun testSearch() {
+//        val fileSearch = FileSearch()
+//        fileSearch.search("/etc")
+//    }
+//
+//    @Test
+//    fun testSearchWithFilters() {
+//        val fileSearch = FileSearch()
+//        fileSearch.search("/etc", Regex("google"))
+//    }
 
 //        val project = ProjectBuilder.builder().build()
 //        val task = project.tasks.register("file-search", FileSearch::class.java)
@@ -18,5 +21,4 @@ class FileSearchTest {
 //        task.configure {
 //            rootDir = "/etc"
 //        }
-    }
 }

@@ -1,3 +1,7 @@
 /.gradle/
 /build/
-/.gitignore/
+workspace.xml
+/build/
+/.idea/
+*.iml
+/.gradle/

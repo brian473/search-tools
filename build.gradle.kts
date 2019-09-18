@@ -1,5 +1,7 @@
 plugins {
+    base
     kotlin("jvm") version "1.3.50"
+    java
 }
 
 group = "org.brianbrown"
@@ -17,4 +19,11 @@ dependencies {
     testImplementation("org.junit.jupiter", "junit-jupiter", "5.5.2")
     testImplementation(kotlin("test"))
     testImplementation(kotlin("reflect"))
+}
+
+tasks.register(name = "search", type = JavaExec::class) {
+    dependsOn(tasks.compileKotlin)
+    group = "search"
+    main = "org.brianbrown.search.SearchToolKt"
+    classpath += sourceSets["main"].runtimeClasspath
 }
